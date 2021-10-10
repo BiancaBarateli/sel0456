@@ -15,4 +15,3 @@ int mult_acc(int y) {
   z += x;
   return x;
 }
-

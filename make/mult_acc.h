@@ -6,4 +6,3 @@ int mult_acc(int); // não precisa dar um nome p/ o argumento
 void mult_set_x(int); 
 //extern int x; // não reserva memória; é só um indicador de que essa variável existe em algum módulo
 #endif
-

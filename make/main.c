@@ -24,11 +24,13 @@ void * conta_a_toa(void * ptr) { // thread (sempre recebe e sempre retorna um po
   printf("Saindo do código crítico e finalizando a thread nº %d\n", n);
   sem_post(&sem);
   pthread_exit(NULL); // pra caso queira que a thread retorne algo (nesse caso não precisaria porque não está retornando nada)
+
   return NULL;
 }
 
 int main(void) {
-  register int j; // faz o compilador alocar essa variável num registrador da máquina p/ ficar mais rápido o processamento (não é muito utilizado hoje)
+
+  //register int j; // faz o compilador alocar essa variável num registrador da máquina p/ ficar mais rápido o processamento (não é muito utilizado hoje)
   double y;
   int z;
 
@@ -37,8 +39,7 @@ int main(void) {
   // 0 porque o processo é único e não shared
   // 1 --> valor inicial; só uma tarefa ou thread pode entrar no código crítico por vez
 
-// Compilação condicional: -> compilar de um jeito ou de outro sem ficar alterando o
-  código
+// Compilação condicional: -> compilar de um jeito ou de outro sem ficar alterando o código
 #ifdef OPTION2
   y = 2;
 #else
@@ -97,4 +98,3 @@ int main(void) {
 
   return 0;
 }
-
