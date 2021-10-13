@@ -4,7 +4,7 @@ CFLAGS = -O2 -g $(DEFFLAGS)
 LDFLAGS = -lm -lpthread
 GCC = gcc
 
-ALL = popen gnuplot popen-read stdout
+ALL = popen gnuplot popen-read 
 
 all: $(ALL)
 

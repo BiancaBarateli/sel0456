@@ -11,7 +11,7 @@ write_data (FILE * stream)
 {
   int i;
   for (i = 0; i < 100; i++)
-    fprintf (stream, "%d\n", i);
+    fprintf (stream, "%d\n", i); // o programa criou uma string e é o standard input do less
   if (ferror (stream))
     {
       fprintf (stderr, "Output to stream failed.\n");
@@ -23,16 +23,16 @@ int
 main (void)
 {
   FILE *output;
-  /* exemplo de graavção em arquivo por stream (FILE) */
+  /* exemplo de gravação em arquivo por stream (FILE) */
   output = fopen("texto.txt", "w");
-  fprintf(output, "teste blablalbla\n");
-  printf("file desriptor output= %d\n", fileno(output));
-  printf("stdin = %d, stdout=%d, stderr=%d\n", fileno(stdin), fileno(stdout), fileno(stderr));
-  int fd;
+  fprintf(output, "teste blablabla\n");
+  printf("file descriptor output = %d\n", fileno(output));
+  printf("stdin=%d, stdout=%d, stderr=%d\n", fileno(stdin), fileno(stdout), fileno(stderr));
 
-  /* exemplo de gravação em arquivo por file descriptor */
+  /* exemplo de gravação em arquivo por file descriptor -> mais baixo nível */
+  int fd;
   fd = open("texto2.txt", O_CREAT | O_WRONLY, 0666);
-  printf("file desriptor fd=%d\n", fd);
+  printf("file descriptor fd = %d\n", fd);
   char *s = "bla bla bla bla \nbla bla bla";
   write(fd, s, strlen(s));
   close(fd);
@@ -54,3 +54,4 @@ main (void)
     }
   return EXIT_SUCCESS;
 }
+

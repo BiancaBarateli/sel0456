@@ -11,7 +11,7 @@ double x = 9; // não tem nada a ver com o x da função mult_acc
 sem_t sem; // global pra ser visível dentro da thread
 
 void * conta_a_toa(void * ptr) { // thread (sempre recebe e sempre retorna um ponteiro universal --> void)
-  register int j;
+  //register int j;
   int n = *(int *)ptr; // tem que converter para um ponteiro de inteiro
   //volatile unsigned int i;
   printf("Na thread nº %d\n", n);

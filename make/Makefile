@@ -9,10 +9,11 @@
 # 2ª OPÇÃO: usando variáveis de compilação e linkagem
 DEFFLAGS = $(patsubst %, -D%, OPTION1 OPTION2 OPTION3)
 # define uma variável que chama a função patsubst
-CFLAGS = -O2 -g $(DEFFLAGS)  # CFLAGS são variáveis de compilação
+CFLAGS = -O2 -g $(DEFFLAGS) -Wall  # CFLAGS são variáveis de compilação
 # -Os: otimização em tamanho do código
 # -02: otimização mais em tamanho do código e tempo de execução
 # -g: p/ fazer depuração, colocar códigos de debug
+# -Wall: warning all
 # -DOPTION2: define OPTION2
 LDFLAGS = -lm -lpthread # LDFLAGS são variáveis de linkagem
 # -lm: libnet

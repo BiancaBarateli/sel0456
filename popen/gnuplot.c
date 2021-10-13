@@ -2,6 +2,9 @@
 #include <stdlib.h>
 #include <unistd.h>
 
+// o programa escreve ou manda uma mensagem para outro programa
+// gnuplot é um programa que plota funções
+
 void
 write_data (FILE * stream)
 {
@@ -16,7 +19,7 @@ write_data (FILE * stream)
 int
 main (void)
 {
-  FILE *output;
+  FILE *output; // FILE é um string de dados
 
   output = popen ("gnuplot --persist", "w");
   if (!output)
@@ -25,7 +28,7 @@ main (void)
                "incorrect parameters or too many files.\n");
       return EXIT_FAILURE;
     }
-  write_data (output);
+  write_data (output); // linka o string output com o standard input do gnuplot
   if (pclose (output) != 0)
     {
       fprintf (stderr,

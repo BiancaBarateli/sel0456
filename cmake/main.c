@@ -3,10 +3,10 @@
 #include <pthread.h>
 #include <unistd.h>
 #include <semaphore.h>
-
 #include "sqr.h"
 #include "mult_acc.h"
 
+#define OPTION2
 double x = 9;
 
 sem_t sem;
