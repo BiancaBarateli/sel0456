@@ -1,6 +1,5 @@
 #include <stdlib.h>
 #include <stdio.h>
-
 #include "range.h"
 
 typedef struct _range _range_t;
@@ -23,16 +22,16 @@ void range_init(range_t * _self, int min, int max) {
   self->val = min;
 }
 
-/* método construtor */
+/* método construtor -> vai alocar um novo objeto na memória */
 range_t * range_new(int min, int max) {
-  range_t * self = (range_t *) malloc(sizeof(_range_t));
+  range_t * self = (range_t *) malloc(sizeof(_range_t)); // criado no heap por causa do malloc
   range_init(self, min, max);
   return self;
 }
 
 /* método destrutor */
 void range_destroy(range_t * self) {
-  free(self);
+  free(self); // limpa a memória
 }
 
 /* método */

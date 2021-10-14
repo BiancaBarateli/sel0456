@@ -1,3 +1,4 @@
+
 #include <sys/types.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -37,7 +38,7 @@ int main (void) {
     }
 
   /* Create the child process. */
-  pid = fork();
+  pid = fork(); // pipe é bom quando tem processo escrito por fork
   if (pid == (pid_t) 0) {
       /* This is the child process.
          Close other end first. */
