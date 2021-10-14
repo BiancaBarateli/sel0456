@@ -6,7 +6,7 @@ typedef struct {
   int key;
 } item_t;
 
-item_t array[] = {
+item_t array[] = { 
   {"bill", 3},
   {"neil", 4},
   {"john", 2},
@@ -20,19 +20,24 @@ void sort(item_t * a, int n) {
 
   for(; i < n && s != 0; i++) {
     s = 0;
-    for(j = 0; j < n-1; j++)
+    for(j = 0; j < n-1; j++) {
       if(a[j].key > a[j+1].key) {
         item_t t = a[j];
         a[j] = a[j+1];
         a[j+1] = t;
+
         s++;
+
       }
-    n--;
+    }
+    //n--;
   }
 }
+
 
 int main(void) {
   sort(array,5);
   for(int i = 0; i < 5; i++)
-    printf("array[%d] = {%s, %d}\n", i, array[i].data, array[i].key);
+    printf("array[%d] = {%s, %d}\n", i, array[i].data,
+           array[i].key);
 }

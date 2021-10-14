@@ -47,3 +47,4 @@ int main(void) {
   range_destroy(r3); // é uma boa prática pra evitar de estourar o heap
   return 0;
 }
+
