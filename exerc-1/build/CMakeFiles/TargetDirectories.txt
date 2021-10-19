@@ -1,0 +1,4 @@
+/home/bianca/Projetos/sel0456/exerc-1/build/CMakeFiles/rebuild_cache.dir
+/home/bianca/Projetos/sel0456/exerc-1/build/CMakeFiles/edit_cache.dir
+/home/bianca/Projetos/sel0456/exerc-1/build/CMakeFiles/sort-o.dir
+/home/bianca/Projetos/sel0456/exerc-1/build/CMakeFiles/sort.dir

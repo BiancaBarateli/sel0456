@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/sort-o.dir/sort-o.c.o  -o sort-o 
