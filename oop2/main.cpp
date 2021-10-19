@@ -4,14 +4,15 @@
 
 extern "C" {
 #include "../oop1/range.h"
-}
+} // diretriz para usar C
 
-using namespace std;
+using namespace std; // pra não precisar escrever std::ostream e std::cout
 
 void f1(void) {
   Range2 r2(0, 6, "R2 object");
   r2.repr(cout);
   r2.incVal();
+
   r2.repr(cout);
   cout << "Val of r2: " << r2.getVal() << endl;
 }
@@ -19,11 +20,14 @@ void f1(void) {
 int main(void) {
   cout << "Output stream aqui!!\n";
 
+  // Em C:
   range_t * rc = range_new(0, 9);
   range_inc(rc, 2);
   range_repr(rc, stdout);
+
   range_destroy(rc);
 
+  // Em C++
   Range r1(0, 10), r3(1, 8);
   f1();
   r1.repr(cout);

@@ -26,6 +26,7 @@ int main(void) {
   range_inc(&r, 1);
   range_inc(&r, 1);
   range_inc(&r, 1);
+
   range_inc(&r, 1);
   range_inc(&r, 1);
   range_inc(&r, 1);

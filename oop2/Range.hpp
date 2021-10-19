@@ -4,11 +4,11 @@
 #include <iostream>
 
 class Range {
-protected:
-  int Val;
-private:
+protected: // permite que as classes que vão ser derivadas dessa classe possam acessar o Val
+  int Val; 
+private: // só visível dentro da classe; só essa classe pode acessar, as derivadas não
   int Max, Min;
-public:
+public: // pra ver fora da classe
   Range(int min, int max);
   void incVal(void);
   void incVal(int step);

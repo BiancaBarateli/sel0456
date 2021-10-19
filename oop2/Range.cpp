@@ -4,7 +4,7 @@ using namespace std;
 
 #include "Range.hpp"
 
-Range::Range(int min, int max) {
+Range::Range(int min, int max) { // construtor
   Val = Min = min;
   Max = max;
 }
@@ -22,6 +22,7 @@ void Range::incVal(int step) {
     Val = Max - 1;
   }
 }
+
 
 void Range::repr(ostream &s) {
   s << "Range object: " <<  " [" << Min << ", " << Max << "[ = " << Val << endl;
